@@ -1,2 +1,5 @@
 # dotfiles
-my dotfiles of vim, tmux, zsh
+
+### Screenshot
+
+![](./screenshot.png)
