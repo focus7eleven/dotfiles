@@ -2,7 +2,7 @@
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./screenshot-0330.png)
 
 Obviously this setup works for me, a JavaScript developer on macOS, but this particular setup may not work for you. If this particular setup doesn't work for you, please steal ideas from this and if you like, contribute back tips, tricks, and other tidbits via Pull Requests if you like!
 
@@ -58,6 +58,11 @@ nnoremap cc "_cc
 ```
 
 ### Tmux Setup
+
+**Why I still need a terminal multiplexer as I can have multiple panes in iTerm2**
+
+Tmux is great, especially when it is used with tmux. You can do a lot more things which iTerm2 does not support. I recommend [this video](https://www.youtube.com/watch?v=5r6yzFEXajQ) for you to check out more.
+
 **How to generate the same style statusline for both tmux and vim?**
 
 Check out this plugin: [edkolev/tmuxline.vim](https://github.com/edkolev/tmuxline.vim)
