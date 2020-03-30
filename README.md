@@ -2,7 +2,7 @@
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./screenshot-20200330.png)
 
 Obviously this setup works for me, a JavaScript developer on macOS, but this particular setup may not work for you. If this particular setup doesn't work for you, please steal ideas from this and if you like, contribute back tips, tricks, and other tidbits via Pull Requests if you like!
 
@@ -14,18 +14,18 @@ Obviously this setup works for me, a JavaScript developer on macOS, but this par
 + [ZSH Setup](#zsh-setup)
 
 
-### Vim and Nepvim Setup
+### Vim and Neovim Setup
 Here I list some of my favorite plugins and settings. For more information you can go checkout my [.vimrc](https://github.com/focus7eleven/dotfiles/blob/master/nvim/.vimrc)
 
-Plugins:
+**Plugins:**
 
-- [tpope/vim-surround]('https://github.com/tpope/vim-surround'): You can't miss this. (tpope is probably the most dope vim plugin artist)
-- [christoomey/vim-tmux-navigator]('https://github.com/christoomey/vim-tmux-navigator'): Seemlessly switch between vim panes and tmux panes.
-- [junegunn/fzf.vim]('https://github.com/junegunn/fzf.vim'): The best fuzzy finder plugin in my opinion.
-- [airblade/vim-gitgutter]('https://github.com/airblade/vim-gitgutter'): An awesome plugin to show diff status on the signcolumn of vim.
-- [itchyny/lightline.vim]('https://github.com/itchyny/lightline.vim'): Elegant and pure stausline.
+- [tpope/vim-surround](https://github.com/tpope/vim-surround): You can't miss this. (tpope is probably the most dope vim plugin artist)
+- [christoomey/vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator): Seemlessly switch between vim panes and tmux panes.
+- [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim): The best fuzzy finder plugin in my opinion.
+- [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter): An awesome plugin to show diff status on the signcolumn of vim.
+- [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim): Elegant and pure stausline.
 
-Settings:
+**Settings:**
 
 ```
 " seemlessly move between vim panes and tmux panes
@@ -60,7 +60,7 @@ nnoremap cc "_cc
 ### Tmux Setup
 **How to generate the same style statusline for both tmux and vim?**
 
-Check out this plugin: [edkolev/tmuxline.vim]('https://github.com/edkolev/tmuxline.vim')
+Check out this plugin: [edkolev/tmuxline.vim](https://github.com/edkolev/tmuxline.vim)
 
 ### ZSH Setup
-My prompt choice: [pure-prompy]('https://github.com/sindresorhus/pure')
+My prompt choice: [pure-prompy](https://github.com/sindresorhus/pure)
