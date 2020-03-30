@@ -2,7 +2,7 @@
 
 ### Screenshot
 
-![](./screenshot-20200330.png)
+![](./screenshot.png)
 
 Obviously this setup works for me, a JavaScript developer on macOS, but this particular setup may not work for you. If this particular setup doesn't work for you, please steal ideas from this and if you like, contribute back tips, tricks, and other tidbits via Pull Requests if you like!
 
@@ -63,4 +63,4 @@ nnoremap cc "_cc
 Check out this plugin: [edkolev/tmuxline.vim](https://github.com/edkolev/tmuxline.vim)
 
 ### ZSH Setup
-My prompt choice: [pure-prompy](https://github.com/sindresorhus/pure)
+My prompt choice: [pure](https://github.com/sindresorhus/pure)
