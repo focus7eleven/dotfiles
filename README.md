@@ -61,10 +61,12 @@ nnoremap cc "_cc
 
 ### Tmux Setup
 
-**Why I still need a terminal multiplexer as I can have multiple panes in iTerm2**
+**Why I still need a terminal multiplexer as I can have multiple panes in iTerm2?**
+
 Tmux is great, especially when it is used with vim. You can do a lot more things which iTerm2 does not support. I recommend [this video](https://www.youtube.com/watch?v=5r6yzFEXajQ) for you to check out more.
 
 **How to generate the same style statusline for both tmux and vim?**
+
 Check out this plugin: [edkolev/tmuxline.vim](https://github.com/edkolev/tmuxline.vim)
 
 ### ZSH Setup
