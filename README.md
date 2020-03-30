@@ -17,6 +17,8 @@ Obviously this setup works for me, a JavaScript developer on macOS, but this par
 ### Vim and Neovim Setup
 Here I list some of my favorite plugins and settings. For more information you can go checkout my [.vimrc](https://github.com/focus7eleven/dotfiles/blob/master/nvim/.vimrc)
 
+> I use neovim instead of vim, and I alias `vim` to `nvim` in .zshrc for convenience.
+
 **Plugins:**
 
 - [tpope/vim-surround](https://github.com/tpope/vim-surround): You can't miss this. (tpope is probably the most dope vim plugin artist)
@@ -60,11 +62,9 @@ nnoremap cc "_cc
 ### Tmux Setup
 
 **Why I still need a terminal multiplexer as I can have multiple panes in iTerm2**
-
-Tmux is great, especially when it is used with tmux. You can do a lot more things which iTerm2 does not support. I recommend [this video](https://www.youtube.com/watch?v=5r6yzFEXajQ) for you to check out more.
+Tmux is great, especially when it is used with vim. You can do a lot more things which iTerm2 does not support. I recommend [this video](https://www.youtube.com/watch?v=5r6yzFEXajQ) for you to check out more.
 
 **How to generate the same style statusline for both tmux and vim?**
-
 Check out this plugin: [edkolev/tmuxline.vim](https://github.com/edkolev/tmuxline.vim)
 
 ### ZSH Setup
