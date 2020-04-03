@@ -45,6 +45,7 @@ set signcolumn=yes
 
 call plug#begin('~/.vim/plugged')
  
+Plug 'unblevable/quick-scope'
 Plug 'junegunn/goyo.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
@@ -76,9 +77,9 @@ Plug 'groenewege/vim-less'
 Plug 'alvan/vim-closetag'
 Plug 'liuchengxu/vista.vim'
 " Plug 'suy/vim-context-commentstring'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'json', 'markdown', 'yaml', 'html'] }
+"Plug 'prettier/vim-prettier', {
+  " \ 'do': 'yarn install',
+  " \ 'for': ['javascript', 'typescript', 'css', 'less', 'json', 'markdown', 'yaml', 'html'] }
 
 call plug#end()
 
@@ -209,7 +210,7 @@ let NERDTreeShowHidden=1
 
 
 " ---------------- prettier config start ------------------
-noremap <leader>p :PrettierAsync<CR>
+" noremap <leader>p :PrettierAsync<CR>
 " ---------------- prettier config end ------------------
 
 
@@ -318,6 +319,13 @@ let g:lightline = {
 
 " Use auocmd to force lightline update.
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+vmap <leader>p :Prettier<CR>
+nmap <leader>p :Prettier<CR>
+vmap <leader>rp <Plug>(coc-format-selected)
+nmap <leader>rp <Plug>(coc-format-selected)
 
 " --------------- coc config end ------------------------
 
@@ -475,3 +483,13 @@ onoremap i% :<C-u>normal vi%<CR>
 xnoremap a% GoggV
 onoremap a% :<C-u>normal va%<CR>
 " --------------- custom text objects end ------------------------
+
+
+
+
+
+
+" --------------- quick-scope config end ------------------------
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" --------------- quick-scope config end ------------------------

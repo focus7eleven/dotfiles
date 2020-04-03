@@ -1,5 +1,5 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS='--height 20% --layout=reverse'
+export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --bind 'ctrl-o:execute(open {+})' --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
 export FZF_DEFAULT_COMMAND='fd --type f'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -21,9 +21,17 @@ alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
 
+alias :q="exit"
+
+alias cdtmp="cd $(mktemp -d -t $(whoami))"
+
 function jk {
   tmux split-window -v -p 30
   tmux split-window -h -p 50
+}
+
+function kk {
+  tmux split-window -h -p 30
 }
 
 function go {
