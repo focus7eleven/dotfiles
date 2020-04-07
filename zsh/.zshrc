@@ -31,7 +31,7 @@ function jk {
 }
 
 function kk {
-  tmux split-window -h -p 30
+  tmux split-window -h -p 70
 }
 
 function go {
@@ -64,6 +64,7 @@ ZSH_THEME=""
 
 plugins=(
   git
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
