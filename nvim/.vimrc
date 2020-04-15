@@ -45,6 +45,7 @@ set signcolumn=yes
 
 call plug#begin('~/.vim/plugged')
  
+Plug 'tpope/vim-abolish'
 Plug 'unblevable/quick-scope'
 Plug 'junegunn/goyo.vim'
 Plug 'airblade/vim-gitgutter'
@@ -112,6 +113,9 @@ cnoremap <C-h> <Left>
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
+
+" Disable tmux navigator when zooming the Vim pane
+let g:tmux_navigator_disable_when_zoomed = 1
 
 noremap <leader><leader> :q<CR>
 noremap <leader>s :w<CR>
@@ -432,6 +436,7 @@ endfunction
 
 nnoremap <C-p> :GFiles<Cr>
 nnoremap <C-g> :Rg<Cr>
+nnoremap <silent> <Leader>ag :Rg <C-R><C-W><CR>
 
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
