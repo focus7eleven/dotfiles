@@ -17,6 +17,10 @@ _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
 
+export DISABLE_AUTO_TITLE=true
+export EDITOR='nvim'
+alias mux="tmuxinator"
+
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"

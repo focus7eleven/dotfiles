@@ -45,6 +45,7 @@ set signcolumn=yes
 
 call plug#begin('~/.vim/plugged')
  
+Plug 'michaeljsmith/vim-indent-object'
 Plug 'tpope/vim-abolish'
 Plug 'unblevable/quick-scope'
 Plug 'junegunn/goyo.vim'
@@ -525,7 +526,6 @@ onoremap i% :<C-u>normal vi%<CR>
 xnoremap a% GoggV
 onoremap a% :<C-u>normal va%<CR>
 " --------------- custom text objects end ------------------------
-
 
 
 
