@@ -129,6 +129,10 @@ nnoremap cc "_cc
 nnoremap <leader>\ "+y
 vnoremap <leader>\ "+y
 
+" move lines up and down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " set terminal tab title to project name
 let &titlestring = " " . expand("%:p")
 if &term == "screen"
@@ -535,3 +539,5 @@ onoremap a% :<C-u>normal va%<CR>
 " Trigger a highlight in the appropriate direction when pressing these keys:
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " --------------- quick-scope config end ------------------------
+
+source $HOME/Projects/github.com/focus7eleven/dotfiles/nvim/function.vim

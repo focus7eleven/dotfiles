@@ -21,6 +21,8 @@ export DISABLE_AUTO_TITLE=true
 export EDITOR='nvim'
 alias mux="tmuxinator"
 
+alias lg="lazygit"
+
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
@@ -28,6 +30,8 @@ alias oldvim="vim"
 alias :q="exit"
 
 alias cdtmp="cd $(mktemp -d -t $(whoami))"
+
+alias as="ayarn install"
 
 function jk {
   tmux split-window -v -p 30
