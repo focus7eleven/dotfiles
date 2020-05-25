@@ -31,7 +31,7 @@ alias :q="exit"
 
 alias cdtmp="cd $(mktemp -d -t $(whoami))"
 
-alias as="ayarn install"
+alias as="ayarn install --no-lockfile --silent"
 
 function jk {
   tmux split-window -v -p 30
@@ -59,7 +59,7 @@ function load_nvm() {
     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 }
 
-# Initialize worker
+#Initialize worker
 async_start_worker nvm_worker -n
 async_register_callback nvm_worker load_nvm
 async_job nvm_worker sleep 0.1

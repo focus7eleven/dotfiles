@@ -78,6 +78,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'groenewege/vim-less'
 Plug 'alvan/vim-closetag'
 Plug 'liuchengxu/vista.vim'
+Plug 'metakirby5/codi.vim'
 " Plug 'suy/vim-context-commentstring'
 "Plug 'prettier/vim-prettier', {
   " \ 'do': 'yarn install',
@@ -102,6 +103,9 @@ let mapleader = " "
 " nnoremap <silent> k gk
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
+
+" Find a word and replace every instance of it in the file
+nnoremap <leader>fr :%s///g<Left><Left>
 
 inoremap <C-p> <C-r>"
 
@@ -197,6 +201,7 @@ let g:ctrlp_use_caching = 0
 
 " --------------- ultisnips config start ------------------------
 let g:UltiSnipsExpandTrigger='<c-c>'
+autocmd FileType less UltiSnipsAddFiletypes css 
 " --------------- ultisnips config end ------------------------
 
 
@@ -453,6 +458,7 @@ function! FZFOpen(command_str)
   exe 'normal! ' . a:command_str . "\<cr>"
 endfunction
 
+nnoremap <silent> <C-space> :call FZFOpen(':Buffers')<CR>
 nnoremap <silent> <C-f>b :call FZFOpen(':Buffers')<CR>
 nnoremap <silent> <C-f>g :call FZFOpen(':Rg')<CR>
 nnoremap <silent> <C-f>c :call FZFOpen(':Commands')<CR>
