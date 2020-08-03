@@ -56,7 +56,7 @@ Plug 'morhetz/gruvbox'
 Plug 'benmills/vimux'
 Plug 'tpope/vim-fugitive'
 Plug 'leafgarland/typescript-vim'
-Plug 'vim-utils/vim-man'
+" Plug 'vim-utils/vim-man'
 " Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -77,7 +77,7 @@ Plug 'honza/vim-snippets'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'groenewege/vim-less'
 Plug 'alvan/vim-closetag'
-Plug 'liuchengxu/vista.vim'
+" Plug 'liuchengxu/vista.vim'
 Plug 'metakirby5/codi.vim'
 " Plug 'suy/vim-context-commentstring'
 "Plug 'prettier/vim-prettier', {
@@ -405,6 +405,23 @@ function! LightlineFilename()
   endif
   return expand('%')
 endfunction
+
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \   'currentfunction': 'CocCurrentFunction'
+      \ },
+      \ }
+
 " --------------- lightline config end ------------------------
 
 
@@ -442,7 +459,11 @@ endfunction
    call nvim_open_win(buf, v:true, opts)
  endfunction
 
-
+command! -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>),
+  \   1,
+  \   {'options': '--delimiter : --nth 2..'})
 
 nnoremap <C-p> :GFiles<Cr>
 nnoremap <C-g> :Rg<Cr>
