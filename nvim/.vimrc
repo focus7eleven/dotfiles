@@ -463,7 +463,7 @@ command! -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>),
   \   1,
-  \   {'options': '--delimiter : --nth 2..'})
+  \   fzf#vim#with_preview({'options': '--delimiter : --nth 2..'}), <bang>0)
 
 nnoremap <C-p> :GFiles<Cr>
 nnoremap <C-g> :Rg<Cr>
