@@ -320,16 +320,16 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " provide custom statusline: lightline.vim, vim-airline.
 " set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-let g:lightline = {
-	\ 'colorscheme': 'wombat',
-	\ 'active': {
-	\   'left': [ [ 'mode', 'paste' ],
-	\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-	\ },
-	\ 'component_function': {
-	\   'cocstatus': 'coc#status'
-	\ },
-	\ }
+" let g:lightline = {
+" 	\ 'colorscheme': 'wombat',
+" 	\ 'active': {
+" 	\   'left': [ [ 'mode', 'paste' ],
+" 	\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+" 	\ },
+" 	\ 'component_function': {
+" 	\   'cocstatus': 'coc#status'
+" 	\ },
+" 	\ }
 
 " Use auocmd to force lightline update.
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
@@ -391,11 +391,11 @@ nnoremap <silent> <space>r  :<C-u>CocListResume<CR>
 
 
 " --------------- lightline config start ------------------------
-let g:lightline = {
-      \ 'component_function': {
-      \   'filename': 'LightlineFilename',
-      \ }
-      \ }
+" let g:lightline = {
+"       \ 'component_function': {
+"       \   'filename': 'LightlineFilename',
+"       \ }
+"       \ }
 
 function! LightlineFilename()
   let root = fnamemodify(get(b:, 'git_dir'), ':h')
@@ -418,6 +418,7 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
+      \   'filename': 'LightlineFilename',
       \   'currentfunction': 'CocCurrentFunction'
       \ },
       \ }
@@ -499,20 +500,20 @@ tnoremap <Esc><Esc> <C-c>
 
 
 " --------------- vista config start ------------------------
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-let g:vista_default_executive = 'coc'
-let g:vista_fzf_preview = ['right:50%']
-nmap <Leader>v :Vista!!<CR>
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'method' ] ]
-      \ },
-      \ 'component_function': {
-      \   'method': 'NearestMethodOrFunction'
-      \ },
-      \ }
+" let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+" let g:vista_default_executive = 'coc'
+" let g:vista_fzf_preview = ['right:50%']
+" nmap <Leader>v :Vista!!<CR>
+" let g:lightline = {
+"       \ 'colorscheme': 'wombat',
+"       \ 'active': {
+"       \   'left': [ [ 'mode', 'paste' ],
+"       \             [ 'readonly', 'filename', 'modified', 'method' ] ]
+"       \ },
+"       \ 'component_function': {
+"       \   'method': 'NearestMethodOrFunction'
+"       \ },
+"       \ }
 " --------------- vista config end ------------------------
 
 
