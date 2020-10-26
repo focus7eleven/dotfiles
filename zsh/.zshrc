@@ -77,7 +77,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source /Users/longcha/Downloads/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #if command -v pyenv 1>/dev/null 2>&1; then
 #  eval "$(pyenv init -)"

@@ -202,6 +202,7 @@ let g:ctrlp_use_caching = 0
 " --------------- ultisnips config start ------------------------
 let g:UltiSnipsExpandTrigger='<c-c>'
 autocmd FileType less UltiSnipsAddFiletypes css 
+autocmd FileType javascriptreact UltiSnipsAddFiletypes typescriptreact
 " --------------- ultisnips config end ------------------------
 
 
