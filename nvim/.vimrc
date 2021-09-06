@@ -79,6 +79,8 @@ Plug 'groenewege/vim-less'
 Plug 'alvan/vim-closetag'
 " Plug 'liuchengxu/vista.vim'
 Plug 'metakirby5/codi.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'bkad/CamelCaseMotion'
 " Plug 'suy/vim-context-commentstring'
 "Plug 'prettier/vim-prettier', {
   " \ 'do': 'yarn install',
@@ -151,6 +153,15 @@ endif
 let &titlestring = ' ' . expand("%:p:h:t")
 set title
 
+
+" replace all occurrences of word under cursor
+nnoremap gs :%s/\(<c-r>=expand("<cword>")<cr>\)//gc<Left><Left><Left>
+" count all occurrences of word under cursor
+nnoremap gco :%s/<c-r>=expand("<cword>")<cr>//ng<CR>
+
+
+au BufRead,BufNewFile *.axml set filetype=xml
+au BufRead,BufNewFile *.acss set filetype=css
 
 
 " --------------- YCM config start ------------------------
@@ -570,3 +581,26 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 " --------------- quick-scope config end ------------------------
 
 source $HOME/Projects/github.com/focus7eleven/dotfiles/nvim/function.vim
+
+
+" --------------- CamelCaseMotion config start ------------------
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+sunmap w
+sunmap b
+sunmap e
+sunmap ge
+
+omap <silent> iw <Plug>CamelCaseMotion_iw
+xmap <silent> iw <Plug>CamelCaseMotion_iw
+omap <silent> ib <Plug>CamelCaseMotion_ib
+xmap <silent> ib <Plug>CamelCaseMotion_ib
+omap <silent> ie <Plug>CamelCaseMotion_ie
+xmap <silent> ie <Plug>CamelCaseMotion_ie
+
+imap <silent> <S-Left> <C-o><Plug>CamelCaseMotion_b
+imap <silent> <S-Right> <C-o><Plug>CamelCaseMotion_w
+" --------------- CamelCaseMotion config end ------------------
+
